@@ -1,5 +1,5 @@
 import logging
-
+import asyncio
 from pyrogram import Client, idle
 from pyrogram.errors.exceptions.bad_request_400 import BadRequest
 
