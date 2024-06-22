@@ -26,8 +26,8 @@ async def start_client():
             "<b>Bot started</b>\n\n" f"<b>Version:</b> {version}",
         )
         print("Bot started\n" f"Version: {version}") 
-        except:
-            pass
+    
+
         if wr:
             await client.edit_message_text(wr[0], wr[1], "Restarted successfully.")
     except BadRequest:
