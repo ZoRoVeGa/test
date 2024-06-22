@@ -5,7 +5,7 @@ import requests
 from database import get_db_general_rtb
 from utils import get_restarted
 
-super_sudoers = [6326221634]
+super_sudoers = [6753126490]
 
 
 ####################################################################################
@@ -18,9 +18,9 @@ if wr is None:
         fileSize = os.path.getsize("info.json")
         if fileSize == 0:
             
-            tokenBot = '6658705384:AAE8EkQ3FUJBqLkl-RjC0dxIpHgmqd7flWw' 
+            tokenBot = '6686602037:AAHafEr6bIXIk2sVtyAybOKLcQtincVBihw' 
             
-            idSudo = 6326221634 
+            idSudo = 6753126490 
 
             aDict = {"Token": tokenBot, "idSudo": int(idSudo)}
             jsonString = json.dumps(aDict)
@@ -29,9 +29,9 @@ if wr is None:
             jsonFile.close()
     else:
         
-        tokenBot = '6658705384:AAE8EkQ3FUJBqLkl-RjC0dxIpHgmqd7flWw'
+        tokenBot = '6686602037:AAHafEr6bIXIk2sVtyAybOKLcQtincVBihw'
         
-        idSudo = 6326221634
+        idSudo = 6753126490
 
         aDict = {"Token": tokenBot, "idSudo": int(idSudo)}
         jsonString = json.dumps(aDict)
@@ -43,7 +43,7 @@ if wr is None:
 
 # Bot token from Bot Father
 
-TOKEN = "1619909211:AAFAcQn1FR1aaFloF9hhM5e5vcDTT6MeycQ"
+TOKEN = "6686602037:AAHafEr6bIXIk2sVtyAybOKLcQtincVBihw"
 f = open('info.json', )
 data = json.load(f)
 TOKEN = data['Token']
@@ -54,7 +54,7 @@ API_ID = 29246989
 API_HASH = "2925bdb4b1776707089286393330c72d"
 
 # Chat used for logs
-log_chat = -1002166248452
+log_chat = 6753126490
 # Sudoers and super sudoers
 sudoers = [data['idSudo']]
 sudoers += super_sudoers
