@@ -17,7 +17,7 @@ client = Client("leomedo", API_ID, API_HASH,
                 plugins=dict(root="plugins", exclude=disabled_plugins))
 
 
-async def start_client():
+async def client.start():
     wr = get_restarted()
     del_restarted()
     try:
@@ -38,4 +38,4 @@ async def start_client():
     await idle()
 
 if __name__ == "__main__":
-    client.loop.run_until_complete(start_client())
+    client.loop.run_until_complete(client.start())
