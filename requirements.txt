@@ -14,3 +14,4 @@ requests
 asyncstdlib
 apscheduler
 pytz
+py-tgcalls
