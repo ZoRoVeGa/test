@@ -38,4 +38,4 @@ async def client_start():
     await idle()
 
 if __name__ == "__main__":
-    client.loop.run_until_complete(client_start())
+    client.loop().run_until_complete(client_start())
