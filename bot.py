@@ -17,21 +17,32 @@ client = Client("leomedo", API_ID, API_HASH,
                 plugins=dict(root="plugins", exclude=disabled_plugins))
 
 async def start_client():
+    """
+    Start the client and send a startup message to the log chat.
+    """
+    # Get the restarted message and delete it
     wr = get_restarted()
-    del_restarted() 
-    client.start()
-    await client.send_message(
-            log_chat,
-            "<b>Bot started</b>\n\n" f"<b>Version:</b> {version}",
-        )
-    print("Bot started\n" f"Version: {version}") 
-    
+    del_restarted()
 
-    if wr:
-        await client.edit_message_text(wr[0], wr[1], "Restarted successfully.")
-        except BadRequest:
-        logging.warning("Unable to send message to log_chat.")
+    try:
+        # Start the client
+        client.start()
+
+        # Send a startup message to the log chat
+        startup_message = f"<b>Bot started</b>\n\n<b>Version:</b> {version}"
+        await client.send_message(log_chat, startup_message)
+        print(startup_message)
+
+        # If the bot was restarted, edit the previous message
+        if wr:
+            await client.edit_message_text(wr[0], wr[1], "Restarted successfully.")
+    except BadRequest as e:
+        logging.warning(f"Unable to send message to log_chat: {e}")
+
+    # Start the PyTgCalls instance
     await pytgcalls.start()
+
+    # Idle until the bot is stopped
     await idle()
 
 if __name__ == "__main__":
