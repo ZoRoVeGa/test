@@ -2,8 +2,8 @@ import logging
 import asyncio
 from pyrogram import Client, idle
 from pyrogram.errors.exceptions.bad_request_400 import BadRequest
-from pytgcalls import PyTgCalls
-from config import TOKEN, pytgcalls, disabled_plugins, log_chat, API_ID, API_HASH
+
+from config import TOKEN, disabled_plugins, log_chat, API_ID, API_HASH
 from utils import get_restarted, del_restarted
 
 with open("version.txt") as f:
@@ -34,7 +34,6 @@ async def client_start():
         logging.warning(f"Unable to send message to log_chat: {e}")
     except Exception as e:
         logging.error(f"An error occurred: {e}")
-    await pytgcalls.start()
     await idle()
 
 if __name__ == "__main__":
