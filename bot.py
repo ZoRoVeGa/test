@@ -18,7 +18,7 @@ client = Client("leomedo", API_ID, API_HASH,
 
 async def start_client():
     if __name__ == "__main__":
-        # client.me = client.get_me()
+        client.me = client.get_me()
         wr = get_restarted()
         del_restarted()
         try:
