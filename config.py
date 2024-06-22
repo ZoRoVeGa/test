@@ -43,7 +43,7 @@ if wr is None:
 
 # Bot token from Bot Father
 
-# TOKEN = "1619909211:AAFAcQn1FR1aaFloF9hhM5e5vcDTT6MeycQ"
+ TOKEN = "1619909211:AAFAcQn1FR1aaFloF9hhM5e5vcDTT6MeycQ"
 f = open('info.json', )
 data = json.load(f)
 TOKEN = data['Token']
