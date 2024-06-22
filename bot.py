@@ -20,7 +20,7 @@ async def start_client():
     wr = get_restarted()
     del_restarted() 
     try:
-        await client.start()
+    client.start()
         await client.send_message(
             log_chat,
             "<b>Bot started</b>\n\n" f"<b>Version:</b> {version}",
