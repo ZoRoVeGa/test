@@ -19,7 +19,6 @@ client = Client("leomedo", API_ID, API_HASH,
 async def start_client():
     wr = get_restarted()
     del_restarted() 
-    try:
     client.start()
         await client.send_message(
             log_chat,
