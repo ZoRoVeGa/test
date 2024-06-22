@@ -1,0 +1,34 @@
+{
+    "name": "Source Venom ",
+    "description": "سورس فينوم لصنع بوتات حمايه بجميع المميزات❤️",
+    "repository": "https://github.com/hackervvvv",
+    "logo": "https://telegra.ph/file/0765472e3c90cd7e9ad2b.jpg",
+    "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+    "mongodb",
+    "Group-Manager-bot",
+    "pyrogram"
+    ],
+    "website": "https://t.me/K_o_c_3",
+    "success_url": "https://t.me/VV_6ov",
+    "stack": "container",
+    "env": {
+        "TOKEN": {
+            "description": "ضع توكن بوتك  @BotFather",
+            "required": true
+        },
+        "SESSION": {
+            "description": "حط جلسة البايروجرام",
+            "required": true
+        },
+        "sudoers": {
+            "description": "حط ايدي مطور البوت",
+            "required": true
+        }
+    }
+}
+
+
+
