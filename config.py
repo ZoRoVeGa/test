@@ -96,4 +96,3 @@ with open("version.txt") as f:
 
 
 # Run function
-dev()
