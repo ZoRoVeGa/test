@@ -29,7 +29,7 @@ async def start_client():
 
     if wr:
         await client.edit_message_text(wr[0], wr[1], "Restarted successfully.")
-    except BadRequest:
+        except BadRequest:
         logging.warning("Unable to send message to log_chat.")
     await pytgcalls.start()
     await idle()
