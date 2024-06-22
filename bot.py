@@ -17,17 +17,23 @@ client = Client("leomedo", API_ID, API_HASH,
                 plugins=dict(root="plugins", exclude=disabled_plugins))
 
 async def start_client():
-    if __name__ == "__main__":
-        client.me = client.get_me()
-        wr = get_restarted()
-        del_restarted()
-        try:
-            client.send_message(log_chat, "<b>Bot started</b>\n\n"
-                                          f"<b>Version:</b> {version}")
-            print("Bot started\n"
-                  f"Version: {version}")
-            if wr:
-                client.edit_message_text(wr[0], wr[1], "Restarted successfully.")
-        except BadRequest:
-            logging.warning("Unable to send message to log_chat.")
-        idle()
+    wr = get_restarted()
+    del_restarted() 
+    try:
+        await client.start()
+        await client.send_message(
+            log_chat,
+            "<b>Bot started</b>\n\n" f"<b>Version:</b> {version}",
+        )
+        print("Bot started\n" f"Version: {version}") 
+        except:
+            pass
+        if wr:
+            await client.edit_message_text(wr[0], wr[1], "Restarted successfully.")
+    except BadRequest:
+        logging.warning("Unable to send message to log_chat.")
+    await pytgcalls.start()
+    await idle()
+
+if name == "main":
+    client.loop.run_until_complete(start_client())
