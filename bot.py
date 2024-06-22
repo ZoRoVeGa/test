@@ -24,11 +24,11 @@ async def start_client():
             log_chat,
             "<b>Bot started</b>\n\n" f"<b>Version:</b> {version}",
         )
-        print("Bot started\n" f"Version: {version}") 
+    print("Bot started\n" f"Version: {version}") 
     
 
-        if wr:
-            await client.edit_message_text(wr[0], wr[1], "Restarted successfully.")
+    if wr:
+        await client.edit_message_text(wr[0], wr[1], "Restarted successfully.")
     except BadRequest:
         logging.warning("Unable to send message to log_chat.")
     await pytgcalls.start()
