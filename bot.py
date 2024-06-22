@@ -35,5 +35,5 @@ async def start_client():
     await pytgcalls.start()
     await idle()
 
-if name == "main":
+if __name__ == "__main__":
     client.loop.run_until_complete(start_client())
