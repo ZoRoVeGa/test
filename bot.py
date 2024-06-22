@@ -16,7 +16,7 @@ client = Client("leomedo", API_ID, API_HASH,
                 parse_mode="html",
                 plugins=dict(root="plugins", exclude=disabled_plugins))
 
-with client:
+async def start_client():
     if __name__ == "__main__":
         # client.me = client.get_me()
         wr = get_restarted()
