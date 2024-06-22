@@ -65,22 +65,7 @@ f.close()
 
 ####################################################################################
 
-def dev():
-    lang = get_db_general_rtb("developer")
-    lang2 = get_db_general_rtb("secdeveloper")
-    if lang is None:
-        print("No Developer")
-    else:
-        for row in lang:
-            t = row[0]
-            developer.append(t)
-    if lang2 is None:
-        print("No Second Devoloper")
-    else:
-        for row in lang2:
-            t = row[0]
-            developer.append(t)
-    print(developer)
+
 
 
 def get_bot_information():
